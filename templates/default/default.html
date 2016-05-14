@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- Bootstrap main library (can be removed, you can use any stylesheet) -->
+		<link href="/js/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+		<!-- Bootstrap justified enhancement (can be removed, you can use any stylesheet) -->
+		<link href="/templates/default/css/justified.css" rel="stylesheet">
+		<!-- RestCMS css (DO NOT REMOVE) -->
+		<link rel="stylesheet" type="text/css" href="../../js/flower/css/flowerDefault.css" />
+		
+		<title>RestCMS</title>
+		<!-- JQUERY (jQuery is needed for RestCMS and Bootstrap as dependency, DO NOT REMOVE!)-->
+		<script src="/js/jquery/jquery.js" type="text/javascript"></script>
+		<!-- RestCMS system javascript (DO NOT REMOVE) -->
+		<script src="/js/flower/flowercompiled.js" type="text/javascript"></script>
+		<!-- RestCMS initialization code (can be altered) -->
+		<script type="text/javascript">
+			var run = function(){				
+				var article = new ArticleComponent("articles");
+				article.attachToDataComponent("articles");
+				
+				//var leftSidebar = new ArticleComponent("leftSidebar");
+				//leftSidebar.attachToClass("leftSidebar");
+				
+				var jumbotron = new ArticleComponent("jumbotron");
+				jumbotron.attachToClass("jumbotron");
+				
+				var main = new MainComponent();
+				main.attachToClass("main");
+				main.addPage("home");
+				main.addPage("about");
+				//main.addPage("contact");
+				main.registerPageComponent(article);
+				main.registerPageComponent(jumbotron);
+				main.setIndexPage("home", "home");
+				
+				Flower.setMainComponent(main);
+				//leftSidebar.buildComponent();
+			}
+			var engine = new Flower(run, "http://localhost", "brejchajan", "default", "cz");
+		</script>
+		<!-- Google API - DO NOT REMOVE, needed for login! -->
+		<script type="text/javascript">
+		  (function() {
+			var po = document.createElement('script');
+			po.type = 'text/javascript'; po.async = true;
+			po.src = 'https://plus.google.com/js/client:plusone.js';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(po, s);
+		  })();
+		</script>
+	</head>
+	<body>
+	
+	 <body>
+
+    <div class="container">
+
+      <div class="masthead">
+        <h3 class="text-muted">RestCMS</h3>
+        <ul class="nav nav-justified">
+			<li><a href="#home" data-use-template="home">Domů</a></li>
+			<li><a href="#about" data-use-template="about">O projektu</a></li>
+			<li><a href="#contact" data-use-template="about">Kontakty</a></li>
+			<li><a href="#someotherpage" data-use-template="about">Další projekty</a></li>
+			<li><a href="#someotherpage2" data-use-template="home">NECO</a></li>
+		</ul>
+      </div>
+	  <div id="main">
+	  	  <div id="home">
+			  <!-- Jumbotron -->
+			  <div class="jumbotron">
+			  </div>
+
+			  <!-- Example row of columns -->
+			  <div class="row">
+			  	  <div class="content">
+					<div class="articles" data-component="articles" data-children-class="col-lg-4"></div>
+				  </div>
+			  </div>
+		  </div>
+		  <div id="about">
+			  <div class="content">
+				  <div class="starter-template">
+					<div class="articles" data-component="articles"></div>
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+	  
+      <!-- Site footer -->
+      <div class="footer">
+        <p>&copy; Jan Brejcha 2013</p>
+        
+        <div id="gConnect">
+			<button class="g-signin"
+				data-scope="https://www.googleapis.com/auth/plus.login"
+				data-requestvisibleactions="http://schemas.google.com/AddActivity"
+				data-clientId="965352633379-tpurhtet0fuvffit4bi2epdsh47p1tos.apps.googleusercontent.com"
+				data-accesstype="offline"
+				data-callback="onSignInCallback"
+				data-theme="dark"
+				data-cookiepolicy="single_host_origin">
+			</button>
+	    </div>
+		<button id="gDisconnect">Odhlásit se</button>
+		
+		</div> <!-- /footer -->
+		<script type="text/javascript">		
+			function onSignInCallback(authResult) {
+			  	Flower.onSignInCallback(authResult);
+			}
+		</script>
+    </div> <!-- /container -->
+	</body>
+</html>

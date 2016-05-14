@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F13FD649-ECCB-48DD-BD02-A4D26C0B270F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RestCMS</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>273FD904-5F4B-45DE-8F04-63FBCEAD6DCA</key>
+		<string>https://github.com/brejchajan/RestCMS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>js/RestCMS/RestCMS.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>273FD904-5F4B-45DE-8F04-63FBCEAD6DCA</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/brejchajan/RestCMS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>273FD904-5F4B-45DE-8F04-63FBCEAD6DCA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>273FD904-5F4B-45DE-8F04-63FBCEAD6DCA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>restcms</string>
+		</dict>
+	</array>
+</dict>
+</plist>

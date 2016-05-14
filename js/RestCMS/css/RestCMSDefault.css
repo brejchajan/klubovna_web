@@ -1,0 +1,31 @@
+/* 
+	FACTORY STYLE FOR RestCMS COMPONENTS
+	DO NOT EDIT UNLESS YOU REALLY KNOW WHAT YOU ARE DOING.
+*/
+
+#RestCMSTextEditor {
+	min-height: 100px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgba(0, 255, 0, 0.3);
+}
+
+.selected {
+	color: red;
+	font-weight: bold;
+	margin: 3px;
+}
+
+.deselected {
+	color: blue;
+	font-weight: normal;
+	margin: 3px;
+}
+
+.content {
+	position:relative;
+}
+
+.articleToolBarEditBox {
+
+}

@@ -1,0 +1,242 @@
+<!--
+@Author: Jan Brejcha <janbrejcha>
+@Date:   2014-02-21T01:11:54+01:00
+@Email:  brejchaja@gmail.com
+@Project: klubovna_rekonstrukce
+@Last modified by:   janbrejcha
+@Last modified time: 2016-05-14T18:20:57+02:00
+-->
+
+
+
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Bootstrap main library (can be removed, you can use any stylesheet) -->
+		<link href="./js/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+        <link href="templates/carousel.css" rel="stylesheet">
+
+        <script src="./js/jquery/jquery.js" type="text/javascript"></script>
+		<script src="./js/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+
+        <script src="./js/clipboard/dist/clipboard.min.js" type="text/javascript"></script>
+
+		<title>Rekonstrukce Klubovny 35. skautského oddílu Liberec</title>
+
+
+        <style>
+              html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                background-color: white;
+                /*color: black;*/
+              }
+              #map{
+                  float: left;
+                  height: 300px;
+                  width: 300px;
+              }
+              #pano{
+                  float: right;
+                  height: 300px;
+                  width: 700px;
+              }
+              #left{
+                  float left;
+              }
+              #left{
+                  float right;
+              }
+              #streetview{
+                  width: 1002px;
+              }
+
+
+            </style>
+
+            <script type="text/javascript">
+                /**carousel**/
+              $(document).ready(function() {
+                $('.carousel').carousel({interval: 5000});
+              });
+
+
+            </script>
+
+
+	</head>
+<body>
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Všichni mě znáte. <br>Jsem skautská klubovna, stojím v ulici Tichá.</h1>
+                  <div id="streetview">
+                      <div id="map"></div>
+                      <div id="pano"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+              <div class="container">
+
+                <div class="carousel-caption">
+                  <img src="img/komin.png" />
+                  <h1>Zatéká do mě. Rozpadám se. Potřebuji opravit!</h1>
+                  <p>Je mi 43 let a celou dobu jsem si vystačila pouze s menšími opravami. Nyní je čas na změnu. Pomozte mi!</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img class="third-slide" src="" alt="Third slide">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h2>Příspěvky v jakékoli výši vítány</h2>
+                  <p>Pokud se rozhodnete na opravu přispět, využijte prosím zvláštní konto, které jsme pro tuto příložitost zřídili.</p>
+                  <div id="cislo-uctu" class="btn btn-primary" data-clipboard-text="2300991490/2010">číslo účtu: 2300991490, kód banky: 2010</div>
+                  <h3>Děkujeme Vám</h3>
+                  <br /><br /><br /><br />
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div><!-- /.carousel -->
+
+        <div class="container">
+
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Slouží nám již 43 let. <span class="text-muted">Pomozte ji opravit!</span></h2>
+          <p class="lead">Na rekonstrukci klubovny již máme schválenou dotaci ve výši <b>1.025.000,-Kč</b>. Nyní je třeba, abychom společně sehnali spoluúčast, která za náš oddíl činí minimálně <b>110 000,-Kč</b>.
+          V plánovaném <a href="data/projekt.pdf" title="Dokument k projektu rekonstrukce klubovny.">projektu</a> prezentujeme, jakým způsobem rekonstrukce proběhne. V plánu je nejen obnova pláště a střechy,
+          ale i přístavba jednoho patra.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="img/zatekani.png" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Precizně připraveno. <span class="text-muted">Pomožte nám s realizací.</span></h2>
+          <p class="lead">Projekt připravil Ing. Arch. Jakub Středa. Prohlédněte si návrhy (<a href="data/zvenku.pdf" title="Projekt klubovny, z venku.">zvenku</a>, <a href="data/prurez.pdf" title="Projekt klubovny, z venku.">zevnitř</a>), jak bude klubovna vypadat.</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <a href="data/zvenku.pdf" title="Projekt klubovny, zvenku."><img class="featurette-image img-responsive center-block" src="img/zvenku_crop.png" alt="Projekt klubovny zvenku."></a>
+          <a href="data/prurez.pdf" title="Projekt klubovny, zevnitř."><img class="featurette-image img-responsive center-block" src="img/zevnitr_crop.png" alt="Projekt klubovny zevnitř."></a>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Ceníme si Vaší podpory. <span class="text-muted">Děkujeme!</span></h2>
+          <p class="lead"></p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="img/skauti.png" alt="Obrázek zobrazující skauty při různých činnostech.">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+    <!-- Clipboard OK modal -->
+    <div id="ucet_clipboard" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Číslo účtu zkopírováno</h4>
+            </div>
+            <div class="modal-body">
+                <p>Číslo účtu pro zaslání daru bylo zkopírováno. Nyní jej můžete vložit do formuláře banky pomocí <kbd>ctrl+v</kbd>.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- Clipboard FAIL modal -->
+    <div id="ucet_clipboard_fail" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Chyba</h4>
+            </div>
+            <div class="modal-body">
+                <p>Bohužel v tomto prohlížeči není automatické kopírování podporováno. Budete muset číslo účtu opsat. Promiňte!</p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+          <!-- Site footer -->
+          <div class="footer">
+            <p>&copy; Jan Brejcha (Kaeru) 2016</p>
+          </div>
+      </div> <!-- /container -->
+
+
+
+      <script type="text/javascript">
+      function initialize() {
+        var fenway = {lat: 50.7810916, lng: 15.0792839};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: fenway,
+          zoom: 14
+        });
+        var panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('pano'), {
+              position: fenway,
+              pov: {
+                heading: 125.59,
+                pitch: 0
+              }
+            });
+        map.setStreetView(panorama);
+      }
+      </script>
+      <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjfz0VzDfFRqtdesOJqm9j0ZZwX4qjzsI&callback=initialize">
+      </script>
+      <script>
+        /**clipboard for account number**/
+        var clipboard = new Clipboard('#cislo-uctu');
+        clipboard.on('success', function(e) {
+            $('#ucet_clipboard').modal();
+            e.clearSelection();
+        });
+
+        clipboard.on('error', function(e) {
+            $('#ucet_clipboard_fail').modal();
+        });
+      </script>
+
+    </body>
+</html>

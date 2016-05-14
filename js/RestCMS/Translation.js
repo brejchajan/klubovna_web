@@ -1,0 +1,23 @@
+var Translation = function(){
+	RestCMS.addTranslation(["Add article", "Přidat článek"]);
+	RestCMS.addTranslation(["Done", "Hotovo"]);
+	RestCMS.addTranslation(["Edit", "Upravit"]);
+	RestCMS.addTranslation(["Delete", "Smazat"]);
+	RestCMS.addTranslation(["Bold", "Tučně"]);
+	RestCMS.addTranslation(["Italic", "Kurzíva"]);
+	RestCMS.addTranslation(["Underline", "Podtrženě"]);
+	RestCMS.addTranslation(["paragraph", "odstavec"]);
+	RestCMS.addTranslation(["heading 1", "nadpis 1"]);
+	RestCMS.addTranslation(["heading 2", "nadpis 2"]);
+	RestCMS.addTranslation(["heading 3", "nadpis 3"]);
+	RestCMS.addTranslation(["heading 4", "nadpis 4"]);
+	RestCMS.addTranslation(["heading 5", "nadpis 5"]);
+	RestCMS.addTranslation(["heading 6", "nadpis 6"]);
+	RestCMS.addTranslation(["Drag this article to a new position between articles.", "Táhněte článek na novou pozici mezi ostatními články."]);
+	RestCMS.addTranslation(["This template is not installed. Please login with google account that has ADMIN rights and this template will be installed automatically.", "Tento template není nainstalován. Prosím, přihlašte se s google účtem, který má práva ADMIN a tento template bude nainstalován automaticky."]);
+	RestCMS.addTranslation(["Administrator", "Administrátor"]);
+	RestCMS.addTranslation(["Normal user", "Běžný uživatel"]);
+	RestCMS.addTranslation(["Link", "Odkaz"]);
+	RestCMS.addTranslation(["Type name of template to be used with this link", "Zadejte název template, který bude použit pro tento odkaz"]);
+	RestCMS.addTranslation(["Step", "Krok"]);
+};
