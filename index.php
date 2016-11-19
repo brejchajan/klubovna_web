@@ -7,6 +7,9 @@
 @Last modified time: 2016-05-14T18:41:00+02:00
 -->
 
+ <?php
+ header("Access-Control-Allow-Origin: *");
+ ?>
 
 
 <!DOCTYPE html>
