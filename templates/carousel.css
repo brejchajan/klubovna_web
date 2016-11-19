@@ -189,11 +189,11 @@ body {
 }
 
 body {
-    font-family: themix, sans-serif;
+    font-family: themix, sans-serif!important;
 }
 
 h1 {
-    font-family: skautbold, sans-serif;
+    font-family: skautbold, sans-serif!important;
     font-weight: normal;
 }
 
